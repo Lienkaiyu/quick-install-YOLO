@@ -27,12 +27,12 @@ if not exist c:\lib (
 cd c:\lib
 
 if not exist installOCV.sh (
-  Powershell.exe Invoke-WebRequest https://github.com/Lienkaiyu/quick-install-darknet/blob/main/run.bat -O installOCV.sh
+  Powershell.exe Invoke-WebRequest https://raw.githubusercontent.com/Lienkaiyu/quick-install-darknet/main/run.bat -O installOCV.sh
 )
 "C:\Program Files\Git\bin\sh.exe" --login -i -c "./installOCV.sh"
 
 if not exist darknet (
-  start git clone https://github.com/AlexeyAB/darknet
+  Powershell.exe git clone https://github.com/AlexeyAB/darknet
 )
 cd darknet
 
