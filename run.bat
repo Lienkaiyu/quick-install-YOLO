@@ -20,11 +20,14 @@ if not exist vs_Professional.exe (
 vs_professional.exe --passive --addProductLang en-us --add Microsoft.VisualStudio.Workload.NativeDesktop
 
 set PATH=%PATH%C:\Program Files\Git;C:\Program Files\CMake\bin
-start
-mkdir c:\lib
+
+if not exist c:\lib (
+  mkdir c:\lib
+)
 cd c:\lib
+
 if not exist installOCV.sh (
-  git clone https://github.com/Lienkaiyu/quick-install-darknet/blob/main/installOCV.sh
+  git clone https://github.com/Lienkaiyu/quick-install-darknet/blob/c8b39f1f62411d089488983d96cfdde14ca298d6/installOCV.sh
 )
 "C:\Program Files\Git\bin\sh.exe" --login -i -c "./installOCV.sh"
 
