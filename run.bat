@@ -19,7 +19,7 @@ if not exist vs_Professional.exe (
 )
 vs_professional.exe --passive --addProductLang en-us --add Microsoft.VisualStudio.Workload.NativeDesktop
 
-set PATH=%PATH%;C:\Program Files\Git;C:\Program Files\CMake\bin
+set PATH=%PATH%C:\Program Files\Git;C:\Program Files\CMake\bin
 
 mkdir c:\lib
 cd c:\lib
