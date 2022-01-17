@@ -17,7 +17,7 @@ echo downloading Visual Studio 2017 Installer
 if not exist vs_Professional.exe (
   Powershell.exe Invoke-WebRequest https://aka.ms/vs/15/release/vs_professional.exe -O vs_Professional.exe
 )
-vs_professional.exe --addProductLang en-us
+vs_professional.exe --passive --addProductLang en-us --add Microsoft.VisualStudio.Workload.NativeDesktop
 
 set PATH=%PATH%;C:\Program Files\Git;C:\Program Files\CMake\bin
 
