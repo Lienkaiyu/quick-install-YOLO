@@ -1,4 +1,3 @@
-@echo off
 if not exist %USERPROFILE%\Documents\WindowsPowerShell\ (mkdir %USERPROFILE%\Documents\WindowsPowerShell\)
 echo $ProgressPreference = 'SilentlyContinue' > %USERPROFILE%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 Powershell.exe Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
