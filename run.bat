@@ -11,7 +11,7 @@ if not exist CMake.msi (
 )
 CMake.msi /passive
 set PATH=%PATH%;C:\Program Files\Git;C:\Program Files\CMake\bin
-Powershell.exe Invoke-WebRequest https://github.com/Lienkaiyu/quick-install-darknet/vs_professional.exe
+Powershell.exe Invoke-WebRequest https://github.com/Lienkaiyu/quick-install-darknet/blob/main/vs_Professional.exe
 vs_professional.exe --addProductLang en-us
 "C:\Program Files\Git\bin\sh.exe" --login -i -c "mkdir /c/lib"
 COPY installOCV.sh C:\lib
