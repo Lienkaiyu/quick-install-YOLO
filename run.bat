@@ -14,7 +14,7 @@ if not exist CMake.msi (
 CMake.msi /passive
 
 echo downloading Visual Studio 2017 Installer
-if not exist vs_Professional.exe(
+if not exist vs_Professional.exe (
   Powershell.exe Invoke-WebRequest https://github.com/Lienkaiyu/quick-install-darknet/blob/main/vs_Professional.exe
 )
 vs_professional.exe --addProductLang en-us
@@ -23,7 +23,7 @@ set PATH=%PATH%;C:\Program Files\Git;C:\Program Files\CMake\bin
 
 mkdir c:\lib
 cd c:\lib
-if not exist installOCV.sh(
+if not exist installOCV.sh (
   Powershell.exe Invoke-WebRequest https://github.com/Lienkaiyu/quick-install-darknet/blob/main/installOCV.sh
 )
 "C:\Program Files\Git\bin\sh.exe" --login -i -c "./installOCV.sh"
