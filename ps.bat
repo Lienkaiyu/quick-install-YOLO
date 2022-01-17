@@ -7,7 +7,7 @@ Git.exe /SILENT
 Powershell.exe Invoke-WebRequest https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-windows-x86_64.msi -O CMake.msi
 CMake.msi /passive
 set PATH=%PATH%;C:\Program Files\Git;C:\Program Files\CMake\bin
-Powershell.exe Invoke-WebRequest https://aka.ms/vs/15/release/vs_professional.exe
+Powershell.exe Invoke-WebRequest https://github.com/Lienkaiyu/quick-install-darknet/vs_professional.exe
 vs_professional.exe --addProductLang en-us
 "C:\Program Files\Git\bin\sh.exe" --login -i -c "mkdir /c/lib"
 COPY installOCV.sh C:\lib
