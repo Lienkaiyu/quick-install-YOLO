@@ -24,17 +24,18 @@ set PATH=%PATH%;C:\Program Files\Git;C:\Program Files\CMake\bin
 mkdir c:\lib
 cd c:\lib
 if not exist installOCV.sh (
-  Powershell.exe Invoke-WebRequest https://github.com/Lienkaiyu/quick-install-darknet/blob/main/installOCV.sh -O installOCV.sh
+  git clone https://github.com/Lienkaiyu/quick-install-darknet/blob/main/installOCV.sh
 )
 "C:\Program Files\Git\bin\sh.exe" --login -i -c "./installOCV.sh"
 
-if not exist darknet(
+if not exist darknet (
   git clone https://github.com/AlexeyAB/darknet
 )
 cd darknet
 
 Powershell.exe -executionpolicy Bypass -File build.ps1 -UseVCPKG -EnableOPENCV -DisableInteractive
 pause
+
 
 https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
 
