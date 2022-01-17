@@ -35,3 +35,8 @@ cd darknet
 
 Powershell.exe -executionpolicy Bypass -File build.ps1 -UseVCPKG -EnableOPENCV -DisableInteractive
 pause
+
+https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
+
+./darknet detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights test.mp4 -benchmark
+./darknet detector test cfg/coco.data yolov4.cfg yolov4.weights -ext_output dog.jpg
