@@ -32,7 +32,7 @@ if not exist installOCV.sh (
 "C:\Program Files\Git\bin\sh.exe" --login -i -c "./installOCV.sh"
 
 if not exist darknet (
-  git clone https://github.com/AlexeyAB/darknet
+  start git clone https://github.com/AlexeyAB/darknet
 )
 cd darknet
 
